@@ -1,0 +1,10 @@
+http://your.site {
+    root /var/www/public
+    rewrite {
+       to {path} {path}/ /index.php?{query}
+    }
+
+    fastcgi / php:9000 php {
+       index.php
+    }
+}
